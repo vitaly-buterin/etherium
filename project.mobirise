@@ -34,7 +34,7 @@
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.8.8",
     "siteFonts": [],
-    "favicon": "",
+    "favicon": "@PROJECT_PATH@/assets/images/ethereum-logo-128x72.png",
     "noImageResize": "",
     "google-analytics": "",
     "cookiesAlert": "",
