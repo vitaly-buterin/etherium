@@ -600,49 +600,6 @@
           "_once": false,
           "_params": {},
           "_anchor": "map1-8"
-        },
-        {
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)",
-              ".mbr-overlay": {
-                "background-color": "@overlayColor",
-                "opacity": "@overlayOpacity"
-              }
-            },
-            ".comments-container": {
-              "max-width": "~'@{maxWidth}%'"
-            },
-            "@media (max-width: 991px)": {
-              ".comments-container": {
-                "min-width": "70% !important"
-              }
-            },
-            "@media (max-width: 767px)": {
-              ".comments-container": {
-                "min-width": "100% !important"
-              }
-            },
-            ".mbr-section-subtitle": {
-              "color": "#7f7e7e"
-            },
-            ".pb2": {
-              "padding-bottom": "2rem"
-            }
-          },
-          "_name": "social1",
-          "_customHTML": "<section class=\"mbr-facebook-comments mbr-section\" group=\"Test\" plugins=\"amp-main, amp-facebook-comments\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"5\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"range\" inline title=\"Max Width\" name=\"maxWidth\" min=\"30\" max=\"100\" value=\"50\" step=\"1\">\n\n        <input type=\"range\" inline title=\"Number of Posts\" name=\"numpostsFacebook\" min=\"1\" max=\"10\" value=\"2\" step=\"1\">\n        <input type=\"text\" title=\"URL of This Page on Your Site\" name=\"linkPostFacebook\" value=\"https://better-life.netlify.com/\">\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background9.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type!='color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#f6efe9\" condition=\"bg.type!='color' && overlay\">\n        <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container text-container\" mbr-class=\"{'pb2':showSubtitle || showTitle}\">\n        <h2 class=\"mbr-fonts-style align-center mbr-bold mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Что пишут о нас</h2>\n        <h3 class=\"mbr-fonts-style align-center mbr-section-subtitle\" mbr-theme-style=\"display-6\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n            To make this FB comments work, set in block parameters the full URL of this page on your site,<br>\n            for example http://your-site.com/this-page.html<br>\n            In Google Chrome FB comments will be shown only when your site is online.\n        </h3>\n    </div>\n    <amp-facebook-comments height=\"50\" layout=\"fixed-height\" class=\"container comments-container mobirise-loader\" data-numposts=\"{{numpostsFacebook}}\" data-href=\"{{linkPostFacebook}}\">\n        <div placeholder class=\"placeholder\"></div>\n    </amp-facebook-comments>\n</section>",
-          "_cid": "rbnJ4l7AWg",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {},
-          "_anchor": "social1-7"
         }
       ]
     }
